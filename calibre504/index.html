@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Ti Mi Niña de Ojitos Lindos</title>
+    <title>Para Ti Mi Amorcito</title>
     <style>
         body {
             margin: 0;
@@ -13,19 +13,21 @@
             justify-content: center;
             align-items: center;
             
-            /* RUTA PARA GITHUB: Buscamos el archivo que subiste al repositorio */
+            /* --- FONDO --- */
+            /* Si subes tu imagen a Netlify/GitHub con el HTML, cambia el nombre aquí */
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('./fondo.jpg') no-repeat center center fixed;
+                        url('fondo.jpg') no-repeat center center fixed;
             background-size: cover;
             
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
-        /* Caja delimitada estilo cristal */
+        /* --- DELIMITADOR (Caja de Cristal) --- */
         .contenedor-romantico {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
+            
             width: 85%;
             max-width: 380px;
             padding: 30px;
@@ -33,8 +35,10 @@
             border: 1px solid rgba(255, 255, 255, 0.25);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             text-align: center;
+            animation: aparecer 1.5s ease-out;
         }
 
+        /* --- TEXTO PERSONALIZADO --- */
         .texto-dedicatoria {
             color: white;
             margin-bottom: 25px;
@@ -46,6 +50,20 @@
             text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
         }
 
+        .texto-dedicatoria p {
+            font-size: 16px;
+            font-style: italic;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Efecto de entrada suave */
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ajuste para el reproductor */
         .reproductor-area {
             border-radius: 15px;
             overflow: hidden;
@@ -59,7 +77,8 @@
         <div class="texto-dedicatoria">
             <h1>💗Para mi persona favorita con los ojitos mas lindos💗</h1>
             <p>Esta canción me hace pensar en ti...en nosotros, nuestro antes, nuestro ahora y mas importante,
-	       nuestri por venir mi niña hermosa💗💗💗</p>
+	       nuestri por venir mi niña hermosa💗💗💗
+	    </p>
         </div>
         
         <div class="reproductor-area">
@@ -72,5 +91,4 @@
     </div>
 
 </body>
-
 </html>
